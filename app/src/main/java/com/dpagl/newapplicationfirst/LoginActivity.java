@@ -18,13 +18,19 @@ public class LoginActivity extends Activity {
     EditText usernameET;
     EditText passwordET;
     LinearLayout loginBT;
+    ListLogin a=ListLogin.getIstance();
+    LinearLayout registerBT;
 
     private boolean loginControl(String username, String password) {
 
-        if (username.equals("dpagliaro97@gmail.com") && password.equals("coglione")) {
-            return true;
-        } else {
+        if(a.searchUtentebyemail(username)==-1){
             return false;
+        }else{
+            Utenti u=a.getUtente(a.searchUtentebyemail(username));
+            if(u.getPassword().equalsIgnoreCase(password)){
+                return true;
+            }else{
+                return false;}
         }
 
 
@@ -38,7 +44,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.d(TAG, "onCreate");
-
+        registerBT=(LinearLayout)findViewById(R.id.login_buttonregister);
         loginBT = (LinearLayout) findViewById(R.id.login_button);
         loginBT.setOnClickListener(new View.OnClickListener() {
 
@@ -51,12 +57,19 @@ public class LoginActivity extends Activity {
                     Toast.makeText(LoginActivity.this, getString(R.string.login), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
-                    finish();
+                    //finish();
                 } else {
 
                     Toast.makeText(LoginActivity.this, "e-mail o password errate", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+        registerBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
