@@ -4,17 +4,17 @@
     android:layout_height="match_parent">
 
     <Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:background="@color/colorPrimary">
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:background="@color/colorPrimary">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_name"
-            android:textColor="@color/text"
-            android:textSize="30sp"/>
-    </Toolbar>
+        android:layout_height="match_parent"
+        android:text="@string/app_name"
+        android:textColor="@color/text"
+        android:textSize="30sp"/>
+</Toolbar>
 
 
     <LinearLayout
@@ -31,8 +31,11 @@
             android:layout_height="wrap_content"
             android:text="e-mail"/>
         <EditText
+            android:inputType="text"
             android:padding="10dp"
+            style="@style/AppTheme"
             android:layout_margin="3dp"
+            android:id="@+id/login_email"
             android:background="@color/sfondiBase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,8 +47,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password"/>
+
         <EditText
+            android:inputType="textPassword"
+            style="@style/AppTheme"
             android:padding="10dp"
+            android:id="@+id/login_password"
             android:layout_margin="3dp"
             android:background="@color/sfondiBase"
             android:layout_width="match_parent"
@@ -55,6 +62,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/login_button"
         android:layout_margin="10dp"
         android:gravity="center"
         android:layout_width="match_parent"

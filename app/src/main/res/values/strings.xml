@@ -3,4 +3,5 @@
     <string name="app_name2">Hello World</string>
     <string name="Titolo">Title</string>
     <string name="abstracted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit.</string>
+    <string name="login">Logged successfully</string>
 </resources>
