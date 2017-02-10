@@ -1,435 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="1">
-<Toolbar
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimary">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/app_name"
-        android:textColor="@color/text"
-        android:textSize="30sp"/>
-</Toolbar>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <LinearLayout
-        android:clickable="true"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/sfondiBase">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Titolo"
-        android:textSize="30dp"
-        android:textColor="@color/colorAccent"
-        />
-
-    <LinearLayout
+    <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sottotito"
-            android:textSize="15dp"
-            android:textStyle="italic"
-            android:textColor="@color/colorPrimary"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textAlignment="textEnd"
-            android:text="08/02/2017"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
+        android:background="@color/colorPrimary">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit."
-            android:id="@+id/textView"
+            android:text="@string/app_name"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+    </Toolbar>
 
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_gravity="center"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="end"
-        >
-        <Button
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@color/sfondiBase"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Leggi"
-            android:layout_gravity="bottom"/>
-    </LinearLayout>
-
-</LinearLayout>
-        <LinearLayout
-            android:clickable="true"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/sfondiBase">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Titolo"
-                android:textSize="30dp"
-                android:textColor="@color/colorAccent"
-                />
+                android:text="Davide"
+                android:textSize="30dp" />
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:padding="5dp">
+
                 <TextView
-                    android:layout_width="0dp"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Tel: " />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/main_teltxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:text="3452126934" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Sottotito"
-                    android:textSize="15dp"
-                    android:textStyle="italic"
-                    android:textColor="@color/colorPrimary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textAlignment="textEnd"
-                    android:text="08/02/2017"/>
+                    android:text="10/02/2017" />
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit."
-                    android:id="@+id/textView"
-
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                >
-                <Button
-                    android:background="@color/sfondiBase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Leggi"
-                    android:layout_gravity="bottom"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:clickable="true"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/sfondiBase">
 
             <TextView
+                android:textSize="20dp"
+                android:id="@+id/main_viewtxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Titolo"
-                android:textSize="30dp"
-                android:textColor="@color/colorAccent"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Sottotito"
-                    android:textSize="15dp"
-                    android:textStyle="italic"
-                    android:textColor="@color/colorPrimary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textAlignment="textEnd"
-                    android:text="08/02/2017"/>
-
-            </LinearLayout>
+                android:padding="5dp"
+                android:text="Via Sandro Sandri 71" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
+                android:layout_gravity="end"
+                android:padding="5dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit."
-                    android:id="@+id/textView"
-
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                >
                 <Button
-                    android:background="@color/sfondiBase"
+                    android:id="@+id/main_callBT"
+                    style="@style/Widget.AppCompat.Light.ActionButton.CloseMode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Leggi"
-                    android:layout_gravity="bottom"/>
+                    android:text="Call" />
+
+                <Button
+                    android:id="@+id/main_goBT"
+                    style="@style/Widget.AppCompat.Light.ActionButton.CloseMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Go" />
             </LinearLayout>
+
 
         </LinearLayout>
-        <LinearLayout
-            android:clickable="true"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/sfondiBase">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Titolo"
-                android:textSize="30dp"
-                android:textColor="@color/colorAccent"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Sottotito"
-                    android:textSize="15dp"
-                    android:textStyle="italic"
-                    android:textColor="@color/colorPrimary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textAlignment="textEnd"
-                    android:text="08/02/2017"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit."
-                    android:id="@+id/textView"
-
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                >
-                <Button
-                    android:background="@color/sfondiBase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Leggi"
-                    android:layout_gravity="bottom"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:clickable="true"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/sfondiBase">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Titolo"
-                android:textSize="30dp"
-                android:textColor="@color/colorAccent"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Sottotito"
-                    android:textSize="15dp"
-                    android:textStyle="italic"
-                    android:textColor="@color/colorPrimary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textAlignment="textEnd"
-                    android:text="08/02/2017"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit."
-                    android:id="@+id/textView"
-
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                >
-                <Button
-                    android:background="@color/sfondiBase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Leggi"
-                    android:layout_gravity="bottom"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:clickable="true"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/sfondiBase">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Titolo"
-                android:textSize="30dp"
-                android:textColor="@color/colorAccent"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Sottotito"
-                    android:textSize="15dp"
-                    android:textStyle="italic"
-                    android:textColor="@color/colorPrimary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textAlignment="textEnd"
-                    android:text="08/02/2017"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra dolor elit, ut dignissim felis consectetur at. Praesent eleifend porta lacus quis elementum. In quis varius orci. Mauris lobortis tincidunt diam eu vestibulum. Etiam ac ex fermentum, semper nulla ut, tempus sem. Vestibulum pretium auctor metus quis vestibulum. Fusce sit."
-                    android:id="@+id/textView"
-
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                >
-                <Button
-                    android:background="@color/sfondiBase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Leggi"
-                    android:layout_gravity="bottom"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
 
 
 
     </LinearLayout>
-</ScrollView>
+
+    </ScrollView>
 
 </LinearLayout>
