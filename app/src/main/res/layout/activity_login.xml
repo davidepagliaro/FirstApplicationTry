@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textColor="@color/text"
+            android:textSize="30sp"/>
+    </Toolbar>
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="9">
+        <TextView
+            android:paddingBottom="5sp"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e-mail"/>
+        <EditText
+            android:padding="10dp"
+            android:layout_margin="3dp"
+            android:background="@color/sfondiBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserisci l' e-mail"/>
+        <TextView
+            android:paddingBottom="5sp"
+            android:paddingLeft="10sp"
+            android:paddingTop="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"/>
+        <EditText
+            android:padding="10dp"
+            android:layout_margin="3dp"
+            android:background="@color/sfondiBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="inserisci la password"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
+     <TextView
+         android:textColor="@color/text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Login"
+         android:textSize="25sp"/>
+    </LinearLayout>
+
+</LinearLayout>
