@@ -14,6 +14,22 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/register_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/register_nomeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Inserisci nome"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/main_activityLy">
 
     <Toolbar
         android:layout_width="match_parent"
@@ -19,93 +20,10 @@
             android:textSize="30sp" />
     </Toolbar>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<android.support.v7.widget.RecyclerView
 
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/sfondiBase"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Davide"
-                android:textSize="30dp" />
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp">
-
-                <TextView
-                    android:textSize="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tel: " />
-
-                <TextView
-                    android:textSize="20dp"
-                    android:id="@+id/main_teltxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:text="3452126934" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="10/02/2017" />
-
-            </LinearLayout>
-
-            <TextView
-                android:textSize="20dp"
-                android:id="@+id/main_viewtxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Via Sandro Sandri 71" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:padding="5dp">
-
-                <Button
-                    android:id="@+id/main_callBT"
-                    style="@style/Widget.AppCompat.Light.ActionButton.CloseMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Call" />
-
-                <Button
-                    android:id="@+id/main_goBT"
-                    style="@style/Widget.AppCompat.Light.ActionButton.CloseMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Go" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-    </ScrollView>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_recycler"/>
 
 </LinearLayout>

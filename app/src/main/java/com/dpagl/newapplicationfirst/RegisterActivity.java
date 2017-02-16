@@ -17,16 +17,18 @@ import java.util.List;
  */
 
 public class RegisterActivity extends Activity implements View.OnClickListener{
-    EditText email;
+    EditText email,nome;
     EditText cell;
     EditText indirizzo;
     EditText password;
     Button btn;
-    ListLogin a = ListLogin.getIstance();
+    UtentiAdapter utentiAdapter=UtentiAdapter.getUtentiAdapter();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        nome=(EditText)findViewById(R.id.register_nomeET);
         email= (EditText)findViewById(R.id.register_emailET);
         cell= (EditText)findViewById(R.id.register_cellET);
         indirizzo= (EditText)findViewById(R.id.register_indET);
@@ -43,6 +45,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onPause() {
         super.onPause();
+        finish();
     }
 
     @Override
@@ -62,8 +65,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Utenti u=new Utenti(email.getText().toString(),cell.getText().toString(),indirizzo.getText().toString(),password.getText().toString());
-        a.setList(u);
+        Utenti u=new Utenti(email.getText().toString(),cell.getText().toString(),indirizzo.getText().toString(),password.getText().toString(),nome.getText().toString());
+        utentiAdapter.addUtente(u);
         Toast.makeText(RegisterActivity.this,"Registered Successfully",Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
         startActivity(intent);

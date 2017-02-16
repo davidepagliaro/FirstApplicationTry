@@ -18,24 +18,9 @@ public class LoginActivity extends Activity {
     EditText usernameET;
     EditText passwordET;
     LinearLayout loginBT;
-    ListLogin a=ListLogin.getIstance();
     LinearLayout registerBT;
 
-    private boolean loginControl(String username, String password) {
-
-        if(a.searchUtentebyemail(username)==-1){
-            return false;
-        }else{
-            Utenti u=a.getUtente(a.searchUtentebyemail(username));
-            if(u.getPassword().equalsIgnoreCase(password)){
-                return true;
-            }else{
-                return false;}
-        }
-
-
-    }
-
+    UtentiAdapter utentiAdapter=UtentiAdapter.getUtentiAdapter();
 
     private static final String TAG = "MainActivity";
 
@@ -52,12 +37,13 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
                 usernameET = (EditText) findViewById(R.id.login_email);
                 passwordET = (EditText) findViewById(R.id.login_password);
-                System.out.println(usernameET.toString());
-                if (loginControl(usernameET.getText().toString(), passwordET.getText().toString())){
+                if (utentiAdapter.loginControl(usernameET.getText().toString(), passwordET.getText().toString())){
                     Toast.makeText(LoginActivity.this, getString(R.string.login), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("email",usernameET.getText().toString());
+                    intent.putExtra("age",1);
                     startActivity(intent);
-                    //finish();
+
                 } else {
 
                     Toast.makeText(LoginActivity.this, "e-mail o password errate", Toast.LENGTH_SHORT).show();
@@ -70,6 +56,7 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
                 Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -91,6 +78,7 @@ public class LoginActivity extends Activity {
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause");
+        finish();
     }
 
     @Override

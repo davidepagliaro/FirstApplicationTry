@@ -10,11 +10,20 @@ public class Utenti {
     private String Indirizzo;
     private String password;
 
-    public Utenti(String email,String cellulare,String indirizzo,String password){
+
+
+    private String nome;
+
+    public Utenti(String email,String cellulare,String indirizzo,String password,String nome){
         this.email=email;
         this.cellulare=cellulare;
         this.Indirizzo=indirizzo;
         this.password=password;
+        this.nome=nome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public String getEmail() {
