@@ -106,12 +106,7 @@ public class UtentiAdapter extends RecyclerView.Adapter<UtentiAdapter.UtentiAdap
             call.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent =new Intent();
-                    intent.setAction(intent.ACTION_VIEW);
-                    Uri uri = Uri.parse("tel:"+dataSet.get(getAdapterPosition()).getCellulare());
-                    intent.setData(uri);
-                    Activity a=new Activity();
-                    a.startActivity(intent);
+
 
 
                 }
