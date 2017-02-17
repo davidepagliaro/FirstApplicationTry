@@ -43,6 +43,8 @@ public class MainActivity extends Activity {
         adapter = UtentiAdapter.getUtentiAdapter();
         businessCardsRV.setLayoutManager(layoutManager);
         businessCardsRV.setAdapter(adapter);
+
+
     }
 
 
@@ -50,6 +52,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
+
     }
 
     @Override
@@ -71,6 +74,8 @@ public class MainActivity extends Activity {
     protected void onRestart() {
         super.onRestart();
     }
+
+
 
 
 
